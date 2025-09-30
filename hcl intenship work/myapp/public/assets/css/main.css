@@ -1,0 +1,8 @@
+:root {
+  --primary: #0d6efd;
+  --accent: #0dcaf0;
+  --muted: #6c757d;
+}
+body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+.navbar-brand { font-weight: 700; }
+.card { border-radius: 12px; }

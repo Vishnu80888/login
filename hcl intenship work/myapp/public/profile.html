@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head> ... </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">MyApp</a>
+      <div class="d-flex align-items-center">
+        <span class="me-3" id="profileName"></span>
+        <button id="logoutBtn" class="btn btn-outline-danger">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">Personal Info</h5>
+          <p id="infoName" class="mb-1"></p>
+          <p id="infoEmail" class="mb-1"></p>
+          <p id="infoDob" class="mb-1"></p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">Contact</h5>
+          <p id="infoContact"></p>
+          <p id="infoAge"></p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5 class="card-title">Account</h5>
+          <button class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#editModal">Edit Profile</button>
+          <button id="logoutModalBtn" class="btn btn-sm btn-outline-danger">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit profile modal -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="editForm" class="needs-validation" novalidate>
+          <div class="modal-header">
+            <h5 class="modal-title">Edit profile</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3"><label>Name</label><input name="name" class="form-control" required></div>
+            <div class="mb-3"><label>Contact</label><input name="contact" class="form-control"></div>
+            <div class="mb-3"><label>Age</label><input type="number" name="age" class="form-control"></div>
+            <div class="mb-3"><label>DOB</label><input type="date" name="dob" class="form-control"></div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+            <button id="saveProfileBtn" class="btn btn-primary" type="submit">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- toast container -->
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index:1080">
+    <div id="toastContainer"></div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/profile.js"></script>
+</body>
+</html>
